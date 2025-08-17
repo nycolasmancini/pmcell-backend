@@ -5,16 +5,12 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "echo 'Build complete'",
-    "start": "medusa start",
-    "dev": "medusa develop",
-    "db:migrate": "medusa migrations run",
-    "db:create": "medusa db:create",
-    "user": "medusa user"
+    "start": "node server.js",
+    "dev": "node server.js"
   },
   "dependencies": {
-    "@medusajs/framework": "latest",
-    "@medusajs/medusa": "latest",
-    "@medusajs/utils": "latest",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
     "pg": "^8.11.3"
   },
   "devDependencies": {
