@@ -1,0 +1,26 @@
+{
+  "name": "pmcell-backend",
+  "version": "1.0.0",
+  "description": "PMCELL Medusa Backend",
+  "main": "dist/main.js",
+  "scripts": {
+    "build": "medusa build",
+    "start": "medusa start",
+    "dev": "medusa develop",
+    "db:migrate": "medusa migrations run",
+    "db:create": "medusa db:create",
+    "user": "medusa user"
+  },
+  "dependencies": {
+    "@medusajs/framework": "latest",
+    "@medusajs/medusa": "latest",
+    "pg": "^8.11.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
