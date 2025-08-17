@@ -1,6 +1,4 @@
-import { defineConfig } from "@medusajs/framework/utils"
-
-export default defineConfig({
+module.exports = {
   projectConfig: {
     databaseUrl: process.env.DATABASE_URL,
     http: {
@@ -14,18 +12,4 @@ export default defineConfig({
   admin: {
     disable: process.env.DISABLE_MEDUSA_ADMIN === "true",
   },
-  modules: [
-    {
-      resolve: "@medusajs/medusa/cache-inmemory",
-      options: {
-        ttl: 30,
-      },
-    },
-    {
-      resolve: "@medusajs/medusa/event-bus-local",
-    },
-    {
-      resolve: "@medusajs/medusa/workflow-engine-inmemory",
-    },
-  ],
-})
+}
