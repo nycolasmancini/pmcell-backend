@@ -12,8 +12,8 @@
     "user": "medusa user"
   },
   "dependencies": {
-    "@medusajs/framework": "latest",
-    "@medusajs/medusa": "latest",
+    "@medusajs/framework": "^2.0.0",
+    "@medusajs/medusa": "^2.0.0",
     "pg": "^8.11.3"
   },
   "devDependencies": {
