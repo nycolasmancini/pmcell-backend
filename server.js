@@ -46,9 +46,51 @@ app.get('/store/regions', (req, res) => {
         id: 'reg_br',
         name: 'Brasil',
         currency_code: 'BRL',
-        countries: ['BR']
+        countries: ['BR'],
+        tax_rate: 0,
+        payment_providers: [],
+        fulfillment_providers: []
       }
     ]
+  });
+});
+
+// Categories endpoint
+app.get('/store/product-categories', (req, res) => {
+  res.json({
+    product_categories: [],
+    count: 0,
+    offset: 0,
+    limit: 100
+  });
+});
+
+// Collections endpoint
+app.get('/store/collections', (req, res) => {
+  res.json({
+    collections: [],
+    count: 0,
+    offset: 0,
+    limit: 10
+  });
+});
+
+// Cart endpoints
+app.get('/store/carts/:id', (req, res) => {
+  res.status(404).json({ message: 'Cart not found' });
+});
+
+app.post('/store/carts', (req, res) => {
+  res.json({
+    cart: {
+      id: 'cart_' + Date.now(),
+      region_id: 'reg_br',
+      items: [],
+      total: 0,
+      subtotal: 0,
+      tax_total: 0,
+      shipping_total: 0
+    }
   });
 });
 
